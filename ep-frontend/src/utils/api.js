@@ -18,7 +18,7 @@ api.interceptors.request.use(
 
 // User login
 export const loginUser = async (email, password) => {
-  const response = await fetch('/api/auth/login', {
+  const response = await api.fetch('/api/auth/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password }),

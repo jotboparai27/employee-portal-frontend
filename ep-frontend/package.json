@@ -49,5 +49,5 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.3"
   },
-  "proxy": "https://pgc-backend-zrie.onrender.com"
+  "proxy": "http://localhost:5050"
 }
