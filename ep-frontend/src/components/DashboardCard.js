@@ -1,6 +1,8 @@
 const DashboardCard = ({ title, value }) => {
+  const color = value > 0 ? '#4caf50' : '#f44336';
+
   return (
-    <div style={styles.card}>
+    <div style={{ ...styles.card, borderColor: color }}>
       <h3>{title}</h3>
       <p>{value}</p>
     </div>
@@ -15,6 +17,7 @@ const styles = {
     borderRadius: '8px',
     textAlign: 'center',
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    border: '2px solid transparent',
   },
 };
 
