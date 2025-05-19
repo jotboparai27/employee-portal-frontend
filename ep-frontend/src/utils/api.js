@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: "https://pgc-backend-zrie.onrender.com",
 });
 
 // Automatically attach token to requests
