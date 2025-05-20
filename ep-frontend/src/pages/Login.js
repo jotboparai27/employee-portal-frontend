@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { loginUser } from "../utils/api";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,7 +16,8 @@ const Login = () => {
     try {
       const { token } = await loginUser(email, password);
       localStorage.setItem("token", token);
-      navigate("/");
+      // navigate("/");
+       window.location.href = "/";
     } catch {
       setErr("Invalid email or password.");
     } finally {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { registerUser } from "../utils/api";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -9,7 +9,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +18,8 @@ const Register = () => {
     try {
       const { token } = await registerUser(name, email, password, role);
       localStorage.setItem("token", token);
-      navigate("/");
+      // navigate("/");
+      window.location.href = "/";
     } catch {
       setErr("Registration failed. Try a different email.");
     } finally {
